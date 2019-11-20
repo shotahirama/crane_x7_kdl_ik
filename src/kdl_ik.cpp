@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
   nh.getParam("/crane_x7/arm_controller/joints", joint_names);
 
   KDL::Chain chain;
-  tree.getChain("world", "crane_x7_gripper_base_link", chain);
+  tree.getChain("base_link", "crane_x7_gripper_base_link", chain);
 
   int n = chain.getNrOfJoints();
   KDL::ChainIkSolverPos_LMA solver(chain);
